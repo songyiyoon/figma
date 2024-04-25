@@ -1,0 +1,432 @@
+@charset "UTF-8";
+*{margin: 0;padding: 0;}
+
+/* 단위
+vw(viewport의 넓이 100vw = viewport의 넓이의 100%
+    50vw - 화면의 50%) 
+vh(viewport hight 높이 100vh = viewport의 높이 100%    
+rem(root의 단위에 따라가는 단위) html
+em(내가 가진 단위에 따라가는 단위)   
+*/
+
+/* header */
+
+header{
+    background-color: #7E57C2;
+    height: 50px;
+    padding: 0 25px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h2{
+    color: #fff;
+    font-size: 17px;
+    line-height: 50px;
+    text-align: center;
+}
+
+
+
+
+
+.welcome{
+    position: relative;
+    height: 100vh;
+    background: url(../image/welcome_bg.png) no-repeat center top; 
+    /* top 50% = center와 같은값을 나타냄 top에서 10px으로 하면 화면에서 10만큼 내려가는데 %로 하면 (x,y)축으로 이동하는거같음 +일때 위로 올라가고 -일때 밑으로 내려간다*/
+    background-size: cover;
+    padding-top: 134px;
+    box-sizing: border-box;
+}
+.welcome h1{
+    font-size: 32px;
+    line-height: 52px;
+    color: #fff;
+    margin-bottom: 127px;
+   
+
+}
+.welcome p{
+    font-size: 21px;
+    line-height: 34px;
+    color: #fff;
+    max-width: 300px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.welcome .sign_links{
+    position: absolute;
+    bottom: 40px;
+    left: 25px;
+    width: calc(100% - 50px);
+    margin:0 auto;
+
+   
+}
+.welcome .sign_links .btn:first-child{
+    margin-bottom: 25px;
+}
+
+
+/* --------Sign in----------- */
+
+
+.sign_In{
+    height: 100vh;
+    background: url(../image/sign_in_bg.jpg) no-repeat center;
+    block-size: cover;
+    padding-top: 92px;
+    box-sizing: border-box;
+}
+.main-tt{
+    font-size: 32px;
+    line-height: 52px;
+    color: #fff;
+    margin-bottom: 116px;
+}
+.sign_In .main-tt{margin-bottom: 10px;}
+.sign_In .page{margin-bottom: 116px;
+display: block;}
+[class^="sign"] form label{display: none;}
+[class^="sign"] form input{
+    width: 100%; 
+    height: 50px; 
+    background-color:rgba(238,238,238,0.4);
+    border: none;
+    padding: 0 25px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 16px;
+    line-height: 50px;
+}
+
+[class^="sign"] form input::placeholder{
+    color: #fff;
+}
+[class^="sign"] form p:not(:last-child){
+margin-bottom: 25px;
+}
+[class^="sign"] .signin_links{
+    margin-top: 20px;
+}
+[class^="sign"] .signin_links a{
+    display: block;
+    text-align: center;
+    color: #fff;
+    font-size: 13px;
+    line-height: 13px;
+}
+[class^="sign"] .signin_links a:first-child{
+    margin-bottom: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+/* [attr]--'attr' 속성이 포함된 요소를 선택
+    [attr="val"]--'attr' 속성이 정확하게 val과 일치하는 요소를 선택
+    [attr~="val"]--'attr' 속성의 값이 val이 포함되는 요소를 선택
+    [attr^="val"]--'attr' 속성의 값이 val로 시작하는 요소를 선택
+    [attr$="val"]--'attr' 속성의 값이 val로 끝나는 요소를 선택
+    [attr*="val"]--'attr' 속성의 값이 val이 포함되는 요소를 선택
+    [attr|="val"]--'attr' 속성의 값이 정확하게 val이나 val로 시작하는 요소를 선택,
+    클래스명중에서 제일 먼저나와야한다
+*/
+
+/* [class]{background-color: red;} */
+/* [class="container"]{border: 5px solid blue;} */
+/* ~은 단어에서 _를 인식한다. _로 연결한 단어를 하나로 취급한다 */
+/* [class~="links"]{border: 5px solid rgb(51, 182, 11);} */
+/* [class^="sign_In"]{border: 5px solid rgb(211, 174, 52);} */
+/* [class$="tt"]{border: 5px solid rgb(156, 23, 105);} */
+/* ~은 단어에서 _를 인식하지 않는다 */
+
+/* [class*="main"]{border: 5px solid rgb(156, 23, 105);} */
+/* [class|="sign_In"]{background-color:#fff;} */
+
+/* *************sign_Up************ */
+
+.sign_Up{
+    height: 100vh;
+    background: url(../image/sign_up_bg.jpg) no-repeat center;
+    background-size: cover;
+    padding-top: 92px;
+    box-sizing: border-box;
+}
+.sign_Up .main-tt{
+margin-bottom: 10px ;
+}
+.sign_Up form{
+    margin-top: 60px;
+}
+.sign_Up .signin_links{
+    margin-top: 20px;
+}
+/* ------------shop------------------ */
+
+.shop{background-color: #fff;
+    overflow: hidden;
+    height: 100vh;
+
+}
+.Top_Product{
+    position: relative;
+    padding: 25px 12vw 0px 0px;
+}
+.Top_Product img{
+    width: 100%;
+}
+
+.info{
+    position: absolute;
+    left: 50px; bottom: -37px; right: 0;
+    background-color: #fff;
+    padding: 10px 0 10px 20px;
+    box-shadow: 0 0 8px rgba(0, 0, 0,0.25);
+}
+/* 그림자 
+글자 text-shadow
+영역 box-shadow: x y blur spread color */
+/*                  위두개생략가능*/
+.info h2{font-size: 18px;
+    line-height: 29px;
+    color: #757575;
+    margin-bottom: 5px;
+}
+.info .desc{
+    display: flex;
+    justify-content: space-between;
+
+}
+.info .desc .price{
+    font-size: 13px;
+    line-height: 21px;
+    color: #7E57C2;
+
+}
+.info .desc .rate{
+    display: flex;
+    gap: 5px;
+    padding-right: 45px;
+}
+.info .desc .rate i{
+    color: #7E57C2;
+}
+.shop_product{
+    position: relative;
+    margin-top: 74px;
+    left: 25px;
+    width: 120%;
+    height: 380px;
+
+}
+.shop_product .product_list{}
+.shop_product .product_list img{
+    width: 100%;
+}
+.shop_product .product_list .slick-slide{
+    padding-right: 25px;
+}
+.shop_product .product_list .slick-track{
+}
+.product_list h3{ 
+    color: #757575;
+    font-size: 15px;
+    margin-top: 15px;
+    line-height: 25px;
+}
+.product_list h4{
+    color: #7E57C2;
+    margin-top: 5px;
+    font-size: 13px;
+    line-height: 21px;
+}
+.shop .page{
+    position: absolute;
+    color: #222;
+    right: 10px; top: 55px;
+    font-size: 20px;
+    z-index: 100;
+
+}
+
+/* -----------------shop_Categories------------ */
+.shopCategories{
+    position: relative;
+    height: 100vh;
+}
+.shop_Categories .slick-slide{
+    height: 50vw;
+    min-height: 200px;
+    max-height: 400px;
+}
+.shop_Categories .slick-slide img{
+    width: 100%;
+    min-height: 200px;
+    min-width: 375px;
+}
+.shop_Categories .slick-dots{
+    position: absolute;
+    bottom: 15px;left: 0;
+    text-align: center;
+    width: 100%;
+
+}
+.shop_Categories .slick-dots li{
+    display: inline-block;
+    margin-right: 10px;
+}
+.shop_Categories .slick-dots li button{
+    font-size: 0;
+    line-height: 0;
+    width: 13px; height: 13px;
+    border: 3px solid #7E57C2;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background: none;
+}
+.shop_Categories .slick-dots li:last-child{
+    margin-right: 0;
+}
+.shop_Categories .slick-dots li.slick-active button{
+    background-color: #7E57C2;
+}
+.shopCategories .shop_wrap{
+    padding: 25px 25px 0;
+}
+.shopCategories .shop_wrap ul{
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+
+}
+.shopCategories .shop_wrap ul li{
+    width: 45%;
+    flex-grow: 1;
+}
+.shopCategories .shop_wrap img{
+    width: 100%;
+    display: block;
+}
+.shopCategories .shop_wrap h4{
+    font-size: 18px;
+    line-height: 25px;
+    color: #757575;
+    margin-top: 15px;
+}
+.shopCategories .shop_wrap p{
+    font-size: 13px;
+    line-height: 21px;
+    color: #757575;
+    margin-top: 1px;
+}
+.shopCategories .page{
+    position: absolute;
+    top: 55px ;
+    left: 10px;
+}
+
+/* --------------------single_Product--------------------- */
+.singleProduct{height: 100vh;
+overflow: hidden;
+}
+.singleProduct main{
+    padding: 25px 25px 0;
+}
+
+.singleProduct main h2{
+    font-size: 18px;
+    line-height: 29px;
+    color: #757575;    
+}
+.singleProduct main .rate{
+  margin-bottom:  20px;
+}
+.singleProduct main .rate i{
+    font-size: 13px;
+    line-height: 21px;
+    color: #7E57C2;
+    margin-bottom: 20px;
+}
+.singleProduct .single_Product{
+    width: 190%;
+}
+.singleProduct .single_Product img{
+    width: 100%;
+}
+.single_Product .slick-slide{
+    padding-right: 25px;
+}
+.single_Product .slick-dots{
+    position: absolute;
+    bottom: -17px; right: 30px;
+    text-align: center;
+    width: 100%;
+}
+.single_Product .slick-dots li{
+    display: inline-block;
+    margin-right: 5px;
+}
+.single_Product .slick-dots li:last-child{margin-right: 0;}
+.single_Product .slick-dots li button{
+    width: 7px;height: 7px;
+    font-size: 0;
+    line-height: 0;
+    border: 1px solid #7E57C2;
+    border-radius: 50%;
+    background: none;
+    box-sizing: border-box;
+}
+.single_Product .slick-dots li.slick-active button{    
+    background-color: #7E57C2;
+}
+.singleProduct .detalis_info{
+    margin-top: 18px;
+}
+.singleProduct .detalis_info h3{
+    font-size: 26px;
+    line-height: 26px;
+    color: #757575;
+}
+.singleProduct .detalis_info p{
+    font-size: 13px;
+    line-height: 21px;
+    color: #757575;
+    margin-top: 10px;
+}
+.detalis_info form{
+    margin-top: 20px;
+}
+.detalis_info form label{
+    display: none;
+}
+.detalis_info form select{
+    margin-right: 25px;
+    width: 100px;
+    height: 25px;
+    color: #757575;
+    border: 1px solid #999;
+    font-size: 10px;
+    line-height: 23px;
+    padding-left: 10px;
+    text-transform: capitalize;
+
+}
+
+.singleProduct .btn{
+outline: none;
+border: none; 
+position: absolute;
+bottom: -5px;
+left: 25px;
+width: calc(100% - 50px);
+}
